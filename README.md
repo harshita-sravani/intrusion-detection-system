@@ -10,7 +10,6 @@ This project implements a machine learning-based intrusion detection system usin
 - taskB_stage2_attack_only.py — Stage-2 classifier for attack-focused detection  
 - taskC_feature_selection_binary.py — Feature selection and optimization  
 - train_stageB_math_model.py — Probabilistic classification model  
-- UNSW_NB15_training-set.csv — Training dataset  
 
 ## Approach
 - Designed a two-stage intrusion detection pipeline:
@@ -28,15 +27,25 @@ This project implements a machine learning-based intrusion detection system usin
 
 ## Results
 - Improved recall for attack detection through threshold tuning  
-- Reduced feature space while maintaining model performance  
-- Achieved efficient and interpretable classification  
+- Achieved reliable classification using a two-stage pipeline  
+- Reduced feature space using feature selection while maintaining performance  
+- Built a more interpretable model using feature importance analysis  
+
+## Sample Output
+- Classifies network traffic as normal or attack  
+- Provides probability-based predictions for better decision-making  
+- Handles imbalanced data through threshold optimization  
+
+## Pipeline
+Data → Preprocessing → Feature Selection → Model Training → Prediction
 
 ## How to Run
 pip install -r requirements.txt  
 python app.py  
 
 ## Dataset
-UNSW-NB15 dataset is used for training. The dataset included here can be replaced with the full dataset if needed.
+UNSW-NB15 dataset is used for training.  
+The dataset is not included in this repository due to size constraints. It can be downloaded separately and placed in the project directory.
 
 ## Future Improvements
 - Real-time intrusion detection system  
